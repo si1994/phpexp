@@ -24,6 +24,7 @@ class CreateUserDatasTable extends Migration
             $table->string('password');
             $table->string('c_password');
             $table->string('profile_pic');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

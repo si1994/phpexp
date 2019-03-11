@@ -24,8 +24,14 @@
 </style>
 </head>
     <body>
-        <div class="container">
-        	<div class="row">
+    
+        <div class="container" >
+
+        <p><button id="copy" class="btn btn-sm btn-info" style="float: right;">Copy</button>
+         <a class="btn btn-primary" style="float: right;" href="{{ url('userManagement/stripe') }}"> payment </a></p>
+
+        	<div class="row" id="code-to-copy">
+
                <div class="col-xs-4 item-photo">
                     @if(count($pertId->profile_pic) > 0)
 			<!-- multi image show karva mate controller ma json_encode karel 6 aetle -->
@@ -70,15 +76,25 @@
                         <div>
                             <h5 class="title-attr" style="margin-top:15px;" >ADDRESS</h5> <h6 style="margin-top:0px;">{{$pertId->address}}</h6></div>
                         </div>
+
+                        <!-- <div class="row">
+                    <button onclick="actOnChirp(event);" data-chirp-id="{{ $pertId->id }}">Like</button>
+                    <span id="likes-count-{{ $pertId->id }}">{{ $pertId->likes_count }}</span>
+                    </div> -->
+
+                    
+
                     </div> 
                         </div>
                     </div>                  
-                    <!-- Botones de compra -->                                          
+                    <!-- Botones de compra -->  
+
                 </div>                              
             </div>
         </div>        
     
-<!-- image open karva mate -->
+
+<!-- image open karva mate Fancy Box -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
@@ -104,6 +120,35 @@
     });
     $.noConflict();
 </script>
+<!-- End image open karva mate Fancy Box -->
+
+
+<!-- copy To Clipboard -->
+<script>
+
+var copyCodeBtn = document.querySelector('#copy');
+copyCodeBtn.addEventListener('click', function(event)
+{
+    var Link = document.querySelector('#code-to-copy');
+    var range = document.createRange();
+    range.selectNode(Link);
+    window.getSelection().addRange(range);
+
+    try
+    {
+        var successful = document.execCommand('copy');
+        // var msg = successful ? 'successful' : 'unsuccessful';
+        // console.log('Copy email command was ' + msg);
+    } 
+    catch (err)
+    {
+        console.log('Oops, unable to copy');
+    }
+    window.getSelection().removeAllRanges();
+});
+
+</script>
+<!-- End copy To Clipboard -->
 
 </body>
 </html>
@@ -111,4 +156,10 @@
 
 
 	
+
+
+
+
+
+
 
