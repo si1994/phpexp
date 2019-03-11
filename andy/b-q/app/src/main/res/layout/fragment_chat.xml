@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlChatProgress"
+        android:visibility="gone">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_progress"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlChatProgress"
+        android:layout_above="@+id/bottompanel"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:id="@+id/rvChatList"/>
+
+
+    <br.com.instachat.emojilibrary.model.layout.WhatsAppPanel
+        android:id="@+id/bottompanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:id="@+id/llSendText"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorLightGrey" />
+
+        <br.com.instachat.emojilibrary.model.layout.WhatsAppPanel
+            android:id="@+id/bottompanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+       &lt;!&ndash; <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/fontSemiBold"
+                android:id="@+id/edtSendChat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:inputType="text"
+                android:hint="@string/send_a_message"
+                android:textColorHint="@color/colorLightGrey"/>
+
+
+            <TextView
+                style="@style/fontBold"
+                android:id="@+id/tvSendChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_16sdp" />
+
+
+        </LinearLayout>&ndash;&gt;
+
+    </LinearLayout>-->
+
+</RelativeLayout>

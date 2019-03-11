@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gif_keyboard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim_emoji_keyboard_size"
+    android:orientation="vertical"
+    android:background="@color/rsc_emoji_tab_bkg"
+    android:visibility="gone">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvGifKeyBord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

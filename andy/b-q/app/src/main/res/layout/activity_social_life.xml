@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".onboard.activity.SocialLifeActivity">
+
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/social_life" />
+
+    <TextView
+        android:id="@+id/tvHeaderOnBoardTitle"
+        style="@style/font_sfuitext_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv"
+        android:gravity="center"
+        android:text="@string/social_life"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:id="@+id/tvSocialTitleLabel"
+        style="@style/font_sfuitext_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeaderOnBoardTitle"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="@string/interest_social_title_info"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_12sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBackNext"
+        android:layout_below="@+id/tvSocialTitleLabel"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcvSocialLifeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--<TextView
+            android:id="@+id/tvSocialDrinking"
+            style="@style/fontSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_blue_fill"
+            android:gravity="center"
+            android:maxLines="4"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/drinking"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvSocialSmoking"
+            style="@style/fontSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rectangle_blue_line"
+            android:gravity="center"
+            android:maxLines="4"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/smoking"
+            android:textColor="@color/colorLightBlueFill"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvSocialMarijuana"
+            style="@style/fontSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rectangle_blue_line"
+            android:gravity="center"
+            android:maxLines="4"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/marijuana"
+            android:textColor="@color/colorLightBlueFill"
+            android:textSize="@dimen/_14sdp" />-->
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBackNext"
+        android:layout_width="@dimen/_86sdp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottom"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSaveForLater"
+            style="@style/font_sfuitext_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/save_for_later"
+            android:textColor="@color/save_for_later"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_rect_gradiant"
+        android:gravity="center">
+
+        <TextView
+            style="@style/font_sfuitext_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/next_events"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

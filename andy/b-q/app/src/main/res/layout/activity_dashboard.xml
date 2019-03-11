@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/frmBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="@dimen/_74sdp"
+            android:layout_height="@dimen/_74sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:background="@drawable/circle_noev" />
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/dashboardBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            app:itemIconSize="@dimen/_34sdp"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/navigation" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/dashboardFabBtn"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_64sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/solid_circle"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:src="@drawable/icon_continue" />
+
+
+
+
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            style="@style/font_sf_pro_text_regular"
+            android:id="@+id/tvBadgeCountInbox"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@drawable/bg_badge"
+            android:gravity="center"
+            android:text="32"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_6sdp" />
+
+
+
+
+</RelativeLayout>

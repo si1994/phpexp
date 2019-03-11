@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvInterestItem"
+        style="@style/font_sfuitext_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:background="@drawable/rectangle_blue_line"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minHeight="@dimen/_40sdp"
+        android:padding="@dimen/_8sdp"
+        tools:text="@string/gender_woman"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp" />
+
+</LinearLayout>
